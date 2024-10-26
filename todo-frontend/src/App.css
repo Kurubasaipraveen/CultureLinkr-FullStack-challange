@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.task-list {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.task-item span {
+  cursor: pointer;
+  flex: 1;
+}
+
+button {
+  margin-left: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+input {
+  padding: 5px;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 5px 10px;
+}
