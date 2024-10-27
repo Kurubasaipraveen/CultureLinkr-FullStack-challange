@@ -14,7 +14,7 @@ const TaskList = () => {
       .catch((error) => console.error('Error fetching tasks:', error));
   }, []);
 
-  // Add a new task
+  // Add  new task
   const addTask = () => {
     if (!newTask) return;
     axios.post('http://localhost:5000/tasks', { title: newTask })
@@ -24,7 +24,7 @@ const TaskList = () => {
       });
   };
 
-  // Complete/Incomplete task
+  // Completed/Incomplete task
   const toggleComplete = (id, completed) => {
     axios.patch(`http://localhost:5000/tasks/${id}`, { completed })
       .then((response) => {
@@ -35,7 +35,7 @@ const TaskList = () => {
       });
   };
 
-  // Delete a task
+  // Delete  task
   const deleteTask = (id) => {
     axios.delete(`http://localhost:5000/tasks/${id}`)
       .then(() => {
@@ -44,7 +44,7 @@ const TaskList = () => {
       });
   };
 
-  // Edit a task
+  // Edit  task
   const editTask = (task, updatedTitle) => {
     if (!updatedTitle) return;
     axios.put(`http://localhost:5000/tasks/${task._id}`, { title: updatedTitle })
